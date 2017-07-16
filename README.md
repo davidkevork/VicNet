@@ -24,8 +24,8 @@ Currently the notification function is broken and whows wrong data
 
 # ScreenShots
 
-![Index Page](https://raw.githubusercontent.com/davidkevork/VicNet/master/assets/img/index.png)
+![Index Page](http://i.imgur.com/ccVVReY.jpg)
 
-![Home Page](https://raw.githubusercontent.com/davidkevork/VicNet/master/assets/img/home.png)
+![Home Page](http://i.imgur.com/ZBBNDc4.png)
 
-![Profile Page](https://raw.githubusercontent.com/davidkevork/VicNet/master/assets/img/profile.png)
+![Profile Page](http://i.imgur.com/FbcbpsP.png)
