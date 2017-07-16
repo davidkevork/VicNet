@@ -191,7 +191,7 @@ img.emojis {
 	width: 33px;
 }
 .friendsNotification {
-	background: transparent url(./../img/friend.jpg) no-repeat bottom;
+	/*background: transparent url(./../img/friend.jpg) no-repeat bottom;*/
 	-webkit-background-size: 38px;
 	-moz-background-size: 38px;
 	-o-background-size: 38px;
@@ -204,7 +204,7 @@ img.emojis {
 	font-size: 18px;
 }
 .normalNotification {
-	background: transparent url(./../img/notification.jpg) no-repeat bottom;
+	/*background: transparent url(./../img/notification.jpg) no-repeat bottom;*/
 	-webkit-background-size: 35px;
 	-moz-background-size: 35px;
 	-o-background-size: 35px;

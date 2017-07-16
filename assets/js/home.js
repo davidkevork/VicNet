@@ -1,4 +1,18 @@
 $(document).ready(function() {
+	$('.normal').click(function() {
+		$('.normal').toggleClass('open');
+		$('.profile-info').removeClass('open');
+		$('.friend').removeClass('open');
+	});
+	$('.friend').click(function() {
+		$('.friend').toggleClass('open');
+		$('.profile-info').removeClass('open');
+		$('.normal').removeClass('open');
+	});
+	$('.profile-info').click(function() {
+		$('.normal').removeClass('open');
+		$('.friend').removeClass('open');
+	});
 	function redirect (url) {
 		var ua = navigator.userAgent.toLowerCase(),
 			isIE = ua.indexOf('msie') !== -1,

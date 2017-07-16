@@ -105,8 +105,8 @@ CREATE TABLE `loginattempt` (
 
 CREATE TABLE `notification` (
   `Id` bigint(20) NOT NULL,
-  `FromId` bigint(20) NOT NULL,
-  `ToId` bigint(20) NOT NULL,
+  `FromId` varchar(255) NOT NULL,
+  `ToId` varchar(255) NOT NULL,
   `TypeId` bigint(20) NOT NULL,
   `Message` varchar(255) NOT NULL,
   `IsRead` varchar(255) NOT NULL,

@@ -1,0 +1,6 @@
+{
+    "require": {
+        "sentry/sentry": "^1.7",
+        "monolog/monolog": "^1.22"
+    }
+}
