@@ -21,3 +21,11 @@ Mysql
 # Note
 this app is buggy and contains many duplicate functions.
 Currently the notification function is broken and whows wrong data
+
+# ScreenShots
+
+![Index Page](/assets/img/index.png)
+
+![Home Page](/assets/img/home.png)
+
+![Profile Page](/assets/img/profile.png)
