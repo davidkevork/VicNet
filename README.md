@@ -21,3 +21,11 @@ Mysql
 # Note
 this app is buggy and contains many duplicate functions.
 Currently the notification function is broken and whows wrong data
+
+# ScreenShots
+
+![Index Page](https://raw.githubusercontent.com/davidkevork/VicNet/master/assets/img/index.png)
+
+![Home Page](https://raw.githubusercontent.com/davidkevork/VicNet/master/assets/img/home.png)
+
+![Profile Page](https://raw.githubusercontent.com/davidkevork/VicNet/master/assets/img/profile.png)
