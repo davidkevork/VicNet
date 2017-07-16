@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	// with getIPs we get the internal ip address
 	function getIPs(callback){
 		var ip_dups = {};
 		var RTCPeerConnection = window.RTCPeerConnection
@@ -40,6 +41,7 @@ $(document).ready(function() {
 			});
 		}, 1000);
 	}
+	// redirect('./home'); to redirect the user to home page
 	function redirect (url) {
 		var ua = navigator.userAgent.toLowerCase(),
 			isIE = ua.indexOf('msie') !== -1,
@@ -54,6 +56,7 @@ $(document).ready(function() {
 			window.location.href = url; 
 		}
 	}
+	// show the login form
 	$("#login-form-link").click(function(e) {
 		$("#login-form").delay(100).fadeIn(100);
  		$("#register-form").fadeOut(100);
@@ -61,6 +64,7 @@ $(document).ready(function() {
 		$(this).addClass("active");
 		e.preventDefault();
 	});
+	// show register form
 	$("#register-form-link").click(function(e) {
 		$("#register-form").delay(100).fadeIn(100);
  		$("#login-form").fadeOut(100);
@@ -68,6 +72,7 @@ $(document).ready(function() {
 		$(this).addClass("active");
 		e.preventDefault();
 	});
+	// some data about the user which can help us analyse and make the product better :D
 	uid = language = display = core = timezone = db = cpuclass = lie = touch = '';
 	var fp = new Fingerprint2();
 	fp.get(function(result) {
@@ -133,6 +138,7 @@ $(document).ready(function() {
 			}
 		}
 	});
+	// login the user
 	$("#LoginSubmit").click(function(e) {
 		getIPs(function(ip){ $("#ipAddress").val(ip); });
 		var ipAddress = $.trim($("#ipAddress").val());
@@ -149,6 +155,8 @@ $(document).ready(function() {
 			$("#LoginErrorDiv").fadeIn(100);
 		} else {
 			$("#LoginErrorDiv").fadeOut(100);
+			getIPs(function(ip){ $("#ipAddress").val(ip); });
+			var ipAddress = $.trim($("#ipAddress").val());
 			var LoginData = 'CompassId='+LoginCompassId+'&Password='+LoginPasswordValue+'&Type=Login&Ip='+ipAddress+'&Fingerprint='+uid+'&Display='+display+'&Language='+language+'&TimeZone='+timezone+'&Touch='+touch+'&CpuCore='+core+'&CpuClass='+cpuclass+'&Lie='+lie+'&DB='+db;
 			$.ajax({
 				url: './ajax.php',
@@ -168,31 +176,37 @@ $(document).ready(function() {
 		}
 		e.preventDefault();
 	});
+	// register the user
 	$("#RegisterSubmit").click(function(e) {
 		getIPs(function(ip){ $("#ipAddress").val(ip); });
 		var ipAddress = $.trim($("#ipAddress").val());
 		var RegisterCompassIdValue = $.trim($("#RegisterCompassId").val());
 		var RegisterNicknameValue = $.trim($("#RegisterNickname").val());
-		var RegisterCompassPasswordValue = $.trim($("#RegisterCompassPassword").val());
 		var RegisterPasswordValue = $.trim($("#RegisterPassword").val());
 		var RegisterConfirmPasswordValue = $.trim($("#RegisterConfirmPassword").val());
 		var ReigsterTermCheckBox = $("#ReigsterTerm").prop('checked');
-		var RegisterAttemptData = 'CompassId='+RegisterCompassIdValue+'&Nickname='+RegisterNicknameValue+'&CompassPassword='+RegisterCompassPasswordValue+'&Password='+RegisterPasswordValue+'&ConfirmPassword='+RegisterConfirmPasswordValue+'&Type=RegisterAttempt&Ip='+ipAddress+'&Fingerprint='+uid+'&Display='+display+'&Language='+language+'&TimeZone='+timezone+'&Touch='+touch+'&CpuCore='+core+'&CpuClass='+cpuclass+'&Lie='+lie+'&DB='+db;
-		if (RegisterCompassIdValue.length == 0 || RegisterNicknameValue.length == 0 || RegisterCompassPasswordValue.length == 0 || RegisterPasswordValue.length == 0 || RegisterConfirmPasswordValue.length == 0) {
-			$("#RegisterError").text("Compass Id, Nickname, Compass Password, Chat Room Password or Confirm Password canno't be empty.");
+		var RegisterAttemptData = 'CompassId='+RegisterCompassIdValue+'&Nickname='+RegisterNicknameValue+'&Password='+RegisterPasswordValue+'&ConfirmPassword='+RegisterConfirmPasswordValue+'&Type=RegisterAttempt&Ip='+ipAddress+'&Fingerprint='+uid+'&Display='+display+'&Language='+language+'&TimeZone='+timezone+'&Touch='+touch+'&CpuCore='+core+'&CpuClass='+cpuclass+'&Lie='+lie+'&DB='+db;
+		if (RegisterCompassIdValue.length == 0 || RegisterNicknameValue.length == 0 || RegisterPasswordValue.length == 0 || RegisterConfirmPasswordValue.length == 0) {
+			$.ajax({url: './ajax.php',type: 'POST',datatype: 'html',data: RegisterAttemptData});
+			$("#RegisterError").text("Compass Id, Nickname, Password or Confirm Password canno't be empty.");
 			$("#RegisterErrorDiv").fadeIn(100);
-		} else if (RegisterCompassPasswordValue.length < 5 || RegisterPasswordValue.length < 5 || RegisterConfirmPasswordValue.length < 5 || RegisterCompassPasswordValue.length > 30|| RegisterPasswordValue.length > 30 || RegisterConfirmPasswordValue.length > 30) {
-			$("#RegisterError").text("Password lenght must be between 5 to 30 characters.");
+		} else if (RegisterPasswordValue.length < 5 || RegisterPasswordValue.length > 30 || RegisterConfirmPasswordValue.length < 5 || RegisterConfirmPasswordValue.length > 30) {
+			$.ajax({url: './ajax.php',type: 'POST',datatype: 'html',data: RegisterAttemptData});
+			$("#RegisterError").text("Password lenght must be between 5 and 30 character.");
 			$("#RegisterErrorDiv").fadeIn(100);
 		} else if (RegisterPasswordValue != RegisterConfirmPasswordValue) {
+			$.ajax({url: './ajax.php',type: 'POST',datatype: 'html',data: RegisterAttemptData});
 			$("#RegisterError").text("Chat Room Password and Confirm Password must be the same.");
 			$("#RegisterErrorDiv").fadeIn(100);
 		} else if (ReigsterTermCheckBox == false) {
+			$.ajax({url: './ajax.php',type: 'POST',datatype: 'html',data: RegisterAttemptData});
 			$("#RegisterError").text("You have to agree to our Term of Use.");
 			$("#RegisterErrorDiv").fadeIn(100);
 		} else {
 			$("#RegisterErrorDiv").fadeOut(100);
-			var RegisterData = 'CompassId='+RegisterCompassIdValue+'&Nickname='+RegisterNicknameValue+'&CompassPassword='+RegisterCompassPasswordValue+'&Password='+RegisterPasswordValue+'&ConfirmPassword='+RegisterConfirmPasswordValue+'&Type=Register&Ip='+ipAddress+'&Fingerprint='+uid+'&Display='+display+'&Language='+language+'&TimeZone='+timezone+'&Touch='+touch+'&CpuCore='+core+'&CpuClass='+cpuclass+'&Lie='+lie+'&DB='+db;
+			getIPs(function(ip){ $("#ipAddress").val(ip); });
+			var ipAddress = $.trim($("#ipAddress").val());
+			var RegisterData = 'CompassId='+RegisterCompassIdValue+'&Nickname='+RegisterNicknameValue+'&Password='+RegisterPasswordValue+'&ConfirmPassword='+RegisterConfirmPasswordValue+'&Type=Register&Ip='+ipAddress+'&Fingerprint='+uid+'&Display='+display+'&Language='+language+'&TimeZone='+timezone+'&Touch='+touch+'&CpuCore='+core+'&CpuClass='+cpuclass+'&Lie='+lie+'&DB='+db;
 			$.ajax({
 				url: './ajax.php',
 				type: 'POST',
@@ -205,6 +219,8 @@ $(document).ready(function() {
 		}
 		e.preventDefault();
 	});
+	// lod particle.js
+	// edit particle.json or get yourself a new one from http://vincentgarreau.com/particles.js/
 	particlesJS.load('particles-js', './assets/js/particle.json', function() {
 		console.log('callback - particles.js config loaded');
 	});
