@@ -1,0 +1,303 @@
+.left {
+	left: 0px;
+	margin-left: 0px;
+	float: left;
+	display: block;
+}
+.right {
+	right: 0px;
+	margin-right: 0px;
+	float: right;
+	display: block;
+}
+input[type=file] {
+	color: transparent;
+	overflow: hidden;
+}
+.StatusBox > div > .StatusProfilePicture {
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.StatusBox > div > p {
+	float: left;
+	text-decoration: none;
+}
+.StatusBox > div > p > span {
+	font-size: 14px;
+	float: left;
+}
+.StatusBox > div > p.StatusText {
+	text-align: left;
+	text-decoration: none;
+	float: left;
+	word-wrap: break-word;
+	width: fixed;
+	font-size: 22px;
+}
+.StatusBox > div > .lc {
+	float: left;
+	text-align: left;
+}
+.StatusBox > div > .lc > a.like-unlike[type="like"] {
+	color: black !important;
+}
+.StatusBox > div > .lc > a.like-unlike[type="unlike"] {
+	color: #2196f3 !important;
+}
+.StatusBox > div > .StatusComment > .StatusProfilePicture {
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.StatusBox > div > .StatusComment {
+	margin-left: 0px;
+	float: left;
+	text-align: left;
+	position: relative;
+	display: block;
+}
+.StatusBox > div > .StatusComment > p {
+	float: left;
+	text-decoration: none;
+}
+.StatusBox > div > .StatusComment > p > span {
+	font-size: 14px;
+	float: left;
+}
+.StatusBox > div > .StatusComment > p.comment {
+	word-break: break-word;
+	text-align: left;
+	text-decoration: none;
+	float: left;
+	word-wrap: break-word;
+	width: fixed;
+	font-size: 20px;
+}
+.append > .StatusBox > div {
+	background-color: rgba(242, 242, 242, 0.4) !important;
+}
+.append > .seperator {
+	background-color: transparent !important;
+	height: 15px;
+}
+.UploadedImage {
+	max-height: 500px;
+	max-width: 100%;
+}
+.CommentUploadedImage {
+	max-height: 300px;
+	max-width: 100%;
+	width: 50%;
+	height: 50%;
+}
+.sk-cube-grid {
+	width: 40px;
+	height: 40px;
+	margin: 40px auto;
+	/*
+	 * Spinner positions
+	 * 1 2 3
+	 * 4 5 6
+	 * 7 8 9
+	 */ }
+	.sk-cube-grid .sk-cube {
+		width: 33%;
+		height: 33%;
+		background-color: #2c3e50;
+		float: left;
+		-webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+						animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; }
+	.sk-cube-grid .sk-cube1 {
+		-webkit-animation-delay: 0.2s;
+						animation-delay: 0.2s; }
+	.sk-cube-grid .sk-cube2 {
+		-webkit-animation-delay: 0.3s;
+						animation-delay: 0.3s; }
+	.sk-cube-grid .sk-cube3 {
+		-webkit-animation-delay: 0.4s;
+						animation-delay: 0.4s; }
+	.sk-cube-grid .sk-cube4 {
+		-webkit-animation-delay: 0.1s;
+						animation-delay: 0.1s; }
+	.sk-cube-grid .sk-cube5 {
+		-webkit-animation-delay: 0.2s;
+						animation-delay: 0.2s; }
+	.sk-cube-grid .sk-cube6 {
+		-webkit-animation-delay: 0.3s;
+						animation-delay: 0.3s; }
+	.sk-cube-grid .sk-cube7 {
+		-webkit-animation-delay: 0.0s;
+						animation-delay: 0.0s; }
+	.sk-cube-grid .sk-cube8 {
+		-webkit-animation-delay: 0.1s;
+						animation-delay: 0.1s; }
+	.sk-cube-grid .sk-cube9 {
+		-webkit-animation-delay: 0.2s;
+						animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+	0%, 70%, 100% {
+		-webkit-transform: scale3D(1, 1, 1);
+						transform: scale3D(1, 1, 1); }
+	35% {
+		-webkit-transform: scale3D(0, 0, 1);
+						transform: scale3D(0, 0, 1); } }
+
+@keyframes sk-cubeGridScaleDelay {
+	0%, 70%, 100% {
+		-webkit-transform: scale3D(1, 1, 1);
+						transform: scale3D(1, 1, 1); }
+	35% {
+		-webkit-transform: scale3D(0, 0, 1);
+						transform: scale3D(0, 0, 1); } }
+label.filebutton {
+	position: relative;
+	overflow: hidden;
+		z-index: 5;
+		width: 40px;
+		top: 0px;
+		height: 40px;
+		background: transparent url(./../img/whitecam.png) 0 0 no-repeat;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-ms-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		-webkit-transition: all 1s linear;
+		-moz-transition: all 1s linear;
+		-ms-transition: all 1s linear;
+		-o-transition: all 1s linear;
+		transition: all 1s linear;
+}
+label span input[type="file"] {
+		z-index: 999;
+		line-height: 0;
+		font-size: 50px;
+		position: absolute;
+		top: -2px;
+		left: -700px;
+		opacity: 0;
+		filter: alpha(opacity = 0);
+		-ms-filter: "alpha(opacity=0)";
+		cursor: pointer;
+		_cursor: hand;
+		margin: 0;
+		padding:0;
+}
+img.emojis {
+	vertical-align: middle;
+	height: 33px;
+	width: 33px;
+}
+.friendsNotification {
+	background: transparent url(./../img/friend.jpg) no-repeat bottom;
+	-webkit-background-size: 38px;
+	-moz-background-size: 38px;
+	-o-background-size: 38px;
+	background-size: 38px;
+	background-position: center;
+	color: black !important;
+}
+.friendsNotification > span {
+	color: black !important;
+	font-size: 18px;
+}
+.normalNotification {
+	background: transparent url(./../img/notification.jpg) no-repeat bottom;
+	-webkit-background-size: 35px;
+	-moz-background-size: 35px;
+	-o-background-size: 35px;
+	background-size: 35px;
+	background-position: center;
+	color: black !important;
+}
+.normalNotification > span {
+	color: black !important;
+	font-size: 18px;
+}
+ul.conversation-body {
+	color: white !important;
+}
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 768px) {
+	.SearchUser {
+		width: 90% !important;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.SearchUser {
+		width: 70% !important;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	.SearchUser {
+		width: 50% !important;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	.SearchUser {
+		width: 50% !important;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+.center {
+	margin-right: auto;
+	margin-left: auto;
+}
+.ui-autocomplete span.hl_results {
+	background-color: #ffff66;
+}
+ul.ui-autocomplete {
+	top: 75px;
+	z-index: 100000;
+	position: fixed;
+	max-height: 250px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-right: 20px;
+}
+.ui-autocomplete li {
+	font-size: 16px;
+	text-align: left;
+}
+* html .ui-autocomplete {
+	height: 250px;
+}
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 768px) {
+	.home-search { width: 90% !important; margin-right: auto !important; margin-left: auto !important; }
+	.ui-menu-item, .ui-menu-item > a { width: 90% !important; margin-right: auto !important; margin-left: auto !important; }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.home-search { width: 280px !important; }
+	.ui-menu-item, .ui-menu-item > a { width: 300px !important; }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	.home-search { width: 500px !important; }
+	.ui-menu-item, .ui-menu-item > a { width: 600px !important; }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	.home-search { width: 600px !important; }
+	.ui-menu-item, .ui-menu-item > a { width: 600px !important; }
+}
+.whiteLink, .whiteLink:hover, .whiteLink:active, .whiteLink:visited, .whiteLink:link {
+	color: white;
+	text-decoration: underline;
+}

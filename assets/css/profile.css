@@ -1,0 +1,197 @@
+.UpdateBackground {
+    position: absolute;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    background: transparent url(./../img/whitecam.png) 0 0 no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+}
+input[type=file] {
+    margin-left: -145px;
+    opacity: 0;
+}
+.lt-profile img.lt-image-lg {
+    z-index: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+}
+.lt-image-profile {
+    z-index: 9;
+}
+@media (max-width: 768px) {
+    .UpdateBackground {
+        width: 25px;
+        height: 25px;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+    }
+    img.lt-image-lg {
+        height: 200px;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+    }
+}
+@media (max-width: 450px) {
+    .lt-image-profile {
+        margin: -75px 10px 0px 25px;
+        width: 100px;
+        height: 100px;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+    }
+    .lt-profile-text > h2 {
+        position: absolute;
+        margin: 200px 0px 0px 125px;
+        font-size: 25px;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+    }
+} 
+@media (min-width: 450px) and (max-width: 768px) {
+    .lt-image-profile {
+        margin: -110px 10px 0px 25px;
+        width: 150px;
+        height: 150px;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+    }
+    .lt-profile-text > h2 {
+        position: absolute;
+        margin: 200px 0px 0px 175px;
+        font-size: 30px;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .UpdateBackground {
+        width: 35px;
+        height: 35px;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+    }
+    .lt-image-profile {
+        margin: -160px 10px 0px 50px;
+        width: 200px;
+        height: 200px;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+    }
+    img.lt-image-lg {
+        height: 350px;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+    }
+    .lt-profile-text > h2 {
+        position: absolute;
+        margin: 350px 0px 0px 250px;
+        font-size: 35px;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    .lt-image-profile {
+        margin: -180px 10px 0px 50px;
+        width: 250px;
+        height: 250px;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+    }
+    img.lt-image-lg {
+        height: 400px;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+    }
+    .lt-profile-text > h2 {
+        position: absolute;
+        margin: 400px 0px 0px 300px;
+        font-size: 35px;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+    }
+}
+@media (min-width: 1200px) {
+    .lt-image-profile {
+        margin: -180px 10px 0px 50px;
+        width: 250px;
+        height: 250px;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+    }
+    img.lt-image-lg {
+        height: 400px;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+    }
+    .lt-profile-text > h2 {
+        position: absolute;
+        margin: 400px 0px 0px 300px;
+        font-size: 45px;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+    }
+}
