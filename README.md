@@ -20,4 +20,6 @@ Javscript
 Mysql
 
 # Note
-this app is buggy and contains many duplicate functions
+this app is buggy and contains many duplicate functions.
+
+# /TODO: fix the code asap
