@@ -12,6 +12,8 @@ open cmd and run php server.php to create local server where the browsers will b
 - assets folder contains all css/js/image files
 - users folder contain all the users profile picture and status images
 
+# Important Notice
+This script uses Bootstrap Neon Theme. Please consider buying a license from https://themeforest.net/item/neon-bootstrap-admin-theme/6434477 before publishing your code
 
 # Languages
 PHP
